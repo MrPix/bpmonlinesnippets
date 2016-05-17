@@ -87,6 +87,23 @@ define("ViewModel", ["ViewModelResources"],
 		return Terrasoft.ViewModel;
 	});
 ```
+### asyncvalidate
+```
+/**
+ * @inheritdoc Terrasoft.BasePageV2#asyncValidate
+ * @protected
+ * @overridden
+ */
+asyncValidate: function(callback, scope) {
+	this.callParent([function(response) {
+		if (!this.validateResponse(response)) {
+			return;
+		}
+		// your methods here
+		callback.call(scope, response);
+	}, this]);
+}
+```
 ### set
 ```
 this.set("Attribute", Value);
