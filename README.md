@@ -47,6 +47,19 @@ esq.filters.add(esq.createColumnFilterWithParameter(
 	Value));
 ```
 ## Viewmodel helpers
+### schema
+```
+define("ContactPage", ["ContactPageResources"], function(resources) {
+	return {
+		attributes: {},
+		messages: {},
+		methods: {},
+		rules: {},
+		diff: /**SCHEMA_DIFF*/ [
+		] /**SCHEMA_DIFF*/
+	};
+});
+```
 ### viewmodel
 ```
 define("ViewModel", ["ViewModelResources"],
