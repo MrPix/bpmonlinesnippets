@@ -1,5 +1,4 @@
-# bpm'online sublime snippets
-bpm'online sublime text snippets
+# bpm'online sublime text snippets
 
 ## Entity schema queries
 ### select
