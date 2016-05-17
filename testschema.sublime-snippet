@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[
+define("${1:Schema}_${2:Package}_Tests", ["SchemaTestsHelper"], function() {
+	var buildConfig = {
+		schemaName: "${1:Schema}"
+	};
+	Terrasoft.SchemaTestsHelper.initTestsSchema(buildConfig, function(viewModelClass, viewConfig, schema) {
+		startTest(function(test) {
+			test.setUp = function() {
+				var testData = test.data;
+				testData.schema = schema;
+				testData.viewConfig = viewConfig;
+				testData.viewModel =
+					Terrasoft.SchemaTestsHelper.createSchemaViewModel(viewModelClass);
+			};
+
+			test.tearDown = function() {
+				var testData = test.data;
+				testData.viewModel.destroy();
+				delete testData.viewModel;
+				Terrasoft.SchemaTestsHelper.clearAllHandlers();
+			};
+
+			${3://Test methods}
+
+		});
+	}, this);
+	return {};
+});
+
+]]></content>
+	<tabTrigger>testschema</tabTrigger>
+	<scope>source.js</scope>
+	<description>Test schema</description>
+</snippet>

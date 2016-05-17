@@ -9,7 +9,7 @@ test.testMethod({
 	}method: function() {
 		var testName = this.name;
 		var testData = test.data;
-		${4:place some test code here}
+		${4://place some test code here}
 		test.testMethodDone();
 	}${3:,
 	tearDown: function() {

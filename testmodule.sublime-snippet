@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+define("${1:Module}_${2:Package}_Tests", ["sandbox", "SchemaTestsHelper"],
+	function() {
+	startTest(function(test) {
+
+		test.setUp = function() {
+		};
+
+		test.tearDown = function() {
+		};
+
+		${3://Test methods}
+
+	});
+
+	return {};
+});
+
+]]></content>
+	<tabTrigger>testmodule</tabTrigger>
+	<scope>source.js</scope>
+	<description>Test module</description>
+</snippet>
