@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+var insert${1:Object} = Ext.create("Terrasoft.InsertQuery", {
+	rootSchemaName: "${1:Object}"
+});
+insert${1:Object}.setParameterValue("${2:Column}", ${3:NewValue}, Terrasoft.DataValueType.${4:TYPE});
+insert${1:Object}.execute(function(response) {
+	if (response.success === true) {
+		${6}
+	}
+}, ${5:this});
+]]></content>
+	<tabTrigger>insert</tabTrigger>
+	<scope>source.js</scope>
+	<description>Insert entity query</description>
+</snippet>

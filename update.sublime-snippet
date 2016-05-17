@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+var update${1:Object} = Ext.create("Terrasoft.UpdateQuery", {
+	rootSchemaName: "${1:Object}"
+});
+// TODO Add filters here
+update${1:Object}.setParameterValue("${2:Column}", ${3:NewValue}, Terrasoft.DataValueType.${4:TYPE});
+update${1:Object}.execute(function(response) {
+	if (response.success === true) {
+		
+	}
+}, ${5:this});
+]]></content>
+	<tabTrigger>update</tabTrigger>
+	<scope>source.js</scope>
+	<description>Update entity query</description>
+</snippet>

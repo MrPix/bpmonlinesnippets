@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+var delete${1:Object} = Ext.create("Terrasoft.DeleteQuery", {
+	rootSchemaName: "${1:Object}"
+});
+${3:// TODO Add filters here}
+delete${1:Object}.execute(function (result) {
+	if (result.success) {
+		
+	}
+}, ${2:this});
+]]></content>
+	<tabTrigger>delete</tabTrigger>
+	<scope>source.js</scope>
+	<description>Delete entity query</description>
+</snippet>
