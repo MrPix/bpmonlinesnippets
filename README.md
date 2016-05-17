@@ -65,7 +65,7 @@ define("ViewModel", ["ViewModelResources"],
 
 			mixins: {},
 
-			columns: {},
+			columns: {}
 
 			//region Methods: Protected
 
@@ -147,6 +147,6 @@ test.testMethod({
 		test.testMethodDone();
 	},
 	tearDown: function() {
-	},
+	}
 });
 ```

@@ -16,7 +16,7 @@ define("${1:ViewModel}", ["${1:ViewModel}Resources"],
 
 			mixins: {},
 
-			columns: {},
+			columns: {}
 
 			//region Methods: Protected
 
