@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+var select${1:Object} = Ext.create("Terrasoft.EntitySchemaQuery", {
+	rootSchemaName: "${1:Object}"
+});
+select${1:Object}.addMacrosColumn(Terrasoft.QueryMacrosType.PRIMARY_COLUMN, "Id");
+select${1:Object}.addMacrosColumn(Terrasoft.QueryMacrosType.PRIMARY_DISPLAY_COLUMN, "Name");
+select${1:Object}.getEntityCollection(function(response) {
+	if (response.success === true) {
+		${3}
+	}
+}, ${2:this});
+]]></content>
+	<tabTrigger>select</tabTrigger>
+	<scope>source.js</scope>
+	<description>Base entity select</description>
+</snippet>

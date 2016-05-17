@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+${1:esq}.filters.add(${1:esq}.createColumnFilterWithParameter(
+	Terrasoft.ComparisonType.EQUAL,
+	"${2:Column}",
+	${3:Value}));
+]]></content>
+	<tabTrigger>filter</tabTrigger>
+	<scope>source.js</scope>
+	<description>Add filter</description>
+</snippet>
