@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+test.diag("${1:someFunction}");
+
+test.testMethod({
+	name: "${1:someFunction} - if called",
+	${2:setup: function() {
+	\},
+	}method: function() {
+		var testName = this.name;
+		var testData = test.data;
+		${4:place some test code here}
+		test.testMethodDone();
+	}${3:,
+	tearDown: function() {
+	\},}
+});
+]]></content>
+	<tabTrigger>testmethod</tabTrigger>
+	<scope>source.js</scope>
+	<description>Siesta test method</description>
+</snippet>
