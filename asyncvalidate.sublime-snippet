@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * @inheritdoc Terrasoft.BasePageV2#asyncValidate
+ * @protected
+ * @overridden
+ */
+asyncValidate: function(callback, scope) {
+	this.callParent([function(response) {
+		if (!this.validateResponse(response)) {
+			return;
+		}
+		${1:// your methods here}
+		callback.call(scope, response);
+	}, this]);
+}
+]]></content>
+	<tabTrigger>asyncvalidate</tabTrigger>
+	<scope>source.js</scope>
+	<description>Async valudate method</description>
+</snippet>
