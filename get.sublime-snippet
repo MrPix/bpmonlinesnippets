@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+this.get("${1:Attribute}");
+]]></content>
+	<tabTrigger>get</tabTrigger>
+	<scope>source.js</scope>
+	<description>Get view model attribute value</description>
+</snippet>

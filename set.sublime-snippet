@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+this.set("${1:Attribute}", ${2:Value});
+]]></content>
+	<tabTrigger>set</tabTrigger>
+	<scope>source.js</scope>
+	<description>Set view model attribute value</description>
+</snippet>
