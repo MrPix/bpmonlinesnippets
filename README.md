@@ -84,6 +84,55 @@ this.set("Attribute", Value);
 this.get("Attribute");
 ```
 ## Test helpers
+### testmodule
+```
+define("Module_Package_Tests", ["sandbox", "SchemaTestsHelper"],
+	function() {
+	startTest(function(test) {
+
+		test.setUp = function() {
+		};
+
+		test.tearDown = function() {
+		};
+
+		//Test methods
+
+	});
+
+	return {};
+});
+```
+### testschema
+```
+define("Schema_Package_Tests", ["SchemaTestsHelper"], function() {
+	var buildConfig = {
+		schemaName: "Schema"
+	};
+	Terrasoft.SchemaTestsHelper.initTestsSchema(buildConfig, function(viewModelClass, viewConfig, schema) {
+		startTest(function(test) {
+			test.setUp = function() {
+				var testData = test.data;
+				testData.schema = schema;
+				testData.viewConfig = viewConfig;
+				testData.viewModel =
+					Terrasoft.SchemaTestsHelper.createSchemaViewModel(viewModelClass);
+			};
+
+			test.tearDown = function() {
+				var testData = test.data;
+				testData.viewModel.destroy();
+				delete testData.viewModel;
+				Terrasoft.SchemaTestsHelper.clearAllHandlers();
+			};
+
+			//Test methods
+
+		});
+	}, this);
+	return {};
+});
+```
 ### testmethod
 ```
 test.diag("someFunction");
