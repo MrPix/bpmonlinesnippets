@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+define("${1:SchemaName}", ["${1:SchemaName}Resources"], function(resources) {
+	return {
+		attributes: {},
+		messages: {},
+		methods: {},
+		rules: {},
+		diff: /**SCHEMA_DIFF*/ [
+		] /**SCHEMA_DIFF*/
+	};
+});
+
+]]></content>
+	<tabTrigger>schema</tabTrigger>
+	<scope>source.js</scope>
+	<description>Create base schema</description>
+</snippet>
